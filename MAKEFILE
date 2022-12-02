@@ -1,0 +1,5 @@
+cpp := $(wildcard src/*.cpp)
+#headers := $(wildcard src/*.h)
+
+build_cpp : $(cpp) #$(headers)
+	i686-elf-g++ -c $^ -o $@ -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti
